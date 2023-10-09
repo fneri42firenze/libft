@@ -30,7 +30,11 @@ void	ft_bzero(void *s, size_t n)
 Riceve due argomenti:
 void *s: un puntatore a una zona di memoria da azzerare.
 size_t n: il numero di byte da azzerare a partire dall'indirizzo puntato da s.
-All'interno della funzione, viene dichiarata una variabile i di tipo size_t e un puntatore l a unsigned char. 
-Il puntatore l viene inizializzato con il valore del puntatore s castato a unsigned char *.
-Viene eseguito un ciclo while che itera da 0 fino a n - 1. Durante ogni iterazione, il valore puntato da l + i viene impostato a zero (0), azzerando così il byte corrispondente nell'area di memoria.
+All'interno della funzione, viene dichiarata una variabile i 
+di tipo size_t e un puntatore l a unsigned char. 
+Il puntatore l viene inizializzato con il valore del puntatore s 
+castato a unsigned char *.
+Viene eseguito un ciclo while che itera da 0 fino a n - 1. 
+Durante ogni iterazione, il valore puntato da l + i viene impostato a zero (0), 
+azzerando così il byte corrispondente nell'area di memoria.
 */
