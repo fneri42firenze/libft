@@ -27,7 +27,7 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
     {
         if (i >= start && j < len)
 		{
-				str[j] = s[i];
+			str[j] = s[i];
         	j++;
 		}
 		i++;
