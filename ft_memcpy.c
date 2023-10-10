@@ -6,7 +6,7 @@
 /*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 20:35:11 by fneri             #+#    #+#             */
-/*   Updated: 2023/10/09 20:37:12 by fneri            ###   ########.fr       */
+/*   Updated: 2023/10/10 18:47:27 by fneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,15 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
+
 /*
-All'interno del ciclo, *((char *)dest + i) accede 
+All'interno del ciclo, 
+*((char *)dest + i) accede 
 al byte in dest all'indice i, 
-e *((char *)src + i) accede al byte in src all'indice i. 
-Questi byte vengono copiati dalla sorgente alla destinazione.
+e *((char *)src + i) accede 
+al byte in src all'indice i. 
+Questi byte vengono copiati 
+dalla sorgente alla destinazione.
 
 Alla fine di ogni iterazione, i viene incrementato 
 per avanzare nella sorgente e nella destinazione.
