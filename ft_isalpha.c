@@ -6,7 +6,7 @@
 /*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 20:34:48 by fneri             #+#    #+#             */
-/*   Updated: 2023/10/09 20:37:24 by fneri            ###   ########.fr       */
+/*   Updated: 2023/10/11 20:34:05 by fneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,3 +19,9 @@ int	ft_isalpha(int a)
 	else
 		return (0);
 }
+/*int main()
+{
+	char a = 'a';
+	printf("%d", ft_isalpha(a));
+	return (0);
+}*/

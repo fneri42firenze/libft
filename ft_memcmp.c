@@ -6,7 +6,7 @@
 /*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 20:35:08 by fneri             #+#    #+#             */
-/*   Updated: 2023/10/09 21:33:47 by fneri            ###   ########.fr       */
+/*   Updated: 2023/10/11 22:50:29 by fneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,10 @@ int	ft_memcmp(const void *ptr1, const void *ptr2, size_t n)
 	return (0);
 }
 
-// #include <stdio.h>
-// int main()
-// {
-//     char ptr1[] = "abef";
-//     char ptr2[] = "abef";
-//     printf("%d\n", ft_memcmp(ptr2, ptr1, 4));
-// }
+/*
+int main()
+{
+     char ptr1[] = "abef";
+     char ptr2[] = "abef";
+     printf("%d\n", ft_memcmp(ptr2, ptr1, 4));
+}*/

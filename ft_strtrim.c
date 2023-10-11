@@ -6,7 +6,7 @@
 /*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:00:25 by fneri             #+#    #+#             */
-/*   Updated: 2023/10/10 18:47:30 by fneri            ###   ########.fr       */
+/*   Updated: 2023/10/11 22:49:58 by fneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,14 +37,14 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (str);
 }
 
-// int main(void)
-// {
-// char s1[] = "Hello, world!"
-// char set[] = "Helrd!"
-// char *str;
+/*int main(void)
+{
+	char s1[] = "Hello, world!"
+	char set[] = "Helrd!"
+	char *str;
 
-// str = ft_strtrim(s1, set);
-// printf("%s\n", str);
-// free(str);
-// return (0);
-// }
+	str = ft_strtrim(s1, set);
+	printf("%s\n", str);
+	free(str);
+	return (0);
+}*/

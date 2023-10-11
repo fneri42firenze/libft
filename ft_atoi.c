@@ -6,7 +6,7 @@
 /*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 20:32:55 by fneri             #+#    #+#             */
-/*   Updated: 2023/10/09 20:37:29 by fneri            ###   ########.fr       */
+/*   Updated: 2023/10/11 20:05:43 by fneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,16 @@ int	ft_atoi(char *str)
 	i = 0;
 	segno = 1;
 	n = 0;
-	while (str[i] == ' ' || (str[i] >= '\t' && str[i] <= '\v'))
+	while (str[i] == ' ' || str[i] == '\n' || str[i] == '\t'
+		|| str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
 		i++;
 	if (str[i] == '+' || str[i] == '-')
 	{
 		if (str[i] == '-')
-			segno++;
-		else
+		{
+			segno = -1;
 			i++;
+		}
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
@@ -37,3 +39,10 @@ int	ft_atoi(char *str)
 	}
 	return (segno * n);
 }
+
+/*int main()
+{
+	char str[] = "     -234";
+	printf("%d", ft_atoi(str));
+	return (0);
+}*/

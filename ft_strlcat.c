@@ -6,31 +6,35 @@
 /*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 20:35:29 by fneri             #+#    #+#             */
-/*   Updated: 2023/10/09 20:36:55 by fneri            ###   ########.fr       */
+/*   Updated: 2023/10/11 22:34:37 by fneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	unsigned int	i;
-	unsigned int	dest_len;
-	unsigned int	src_len;
+	size_t		i;
+	size_t		dest_size;
+	size_t		src_size;
 
+	dest_size = ft_strlen(dst);
+	src_size = ft_strlen(src);
+	if (size <= dest_size)
+		return (src_size + size);
 	i = 0;
-	dest_len = ft_strlen(dest);
-	src_len = ft_strlen(src);
-	if (size <= dest_len)
-		src_len += size;
-	else
-		src_len += dest_len;
-	while (src[i] != '\0' && (dest_len + 1) < size)
+	while (src[i] && (dest_size + i) < (size - 1))
 	{
-		dest[dest_len] = src[i];
-		dest_len++;
+		dst[dest_size + i] = src[i];
 		i++;
 	}
-	dest[dest_len] = '\0';
-	return (src_len);
+	dst[dest_size + i] = '\0';
+	return (dest_size + src_size);
 }
+/*int main()
+{
+	char src[] = "ciao";
+	char dest[] = "comevvv";
+	printf("%ld", ft_strlcat(dest, src, 5));
+	return (0);
+}*/

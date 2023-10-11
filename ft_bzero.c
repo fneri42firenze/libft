@@ -6,7 +6,7 @@
 /*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 20:33:07 by fneri             #+#    #+#             */
-/*   Updated: 2023/10/09 20:37:28 by fneri            ###   ########.fr       */
+/*   Updated: 2023/10/11 20:34:02 by fneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,13 @@ void	ft_bzero(void *s, size_t n)
 	}
 }
 
+/*int main()
+{
+	char str[] = "ciao";
+	ft_bzero(str, 3);
+	printf("%s\n", str);
+	return (0);
+}*/
 /*
 Riceve due argomenti:
 void *s: un puntatore a una zona di memoria da azzerare.

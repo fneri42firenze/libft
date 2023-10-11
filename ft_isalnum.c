@@ -6,7 +6,7 @@
 /*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 20:34:45 by fneri             #+#    #+#             */
-/*   Updated: 2023/10/09 20:37:19 by fneri            ###   ########.fr       */
+/*   Updated: 2023/10/11 20:08:19 by fneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,3 +19,10 @@ int	ft_isalnum(int a)
 	else
 		return (0);
 }
+
+/*int main()
+{
+	char a = '*';
+	printf("%d", ft_isalnum(a));
+	return (0);
+}*/

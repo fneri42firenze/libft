@@ -6,27 +6,47 @@
 /*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 20:35:32 by fneri             #+#    #+#             */
-/*   Updated: 2023/10/11 11:11:54 by fneri            ###   ########.fr       */
+/*   Updated: 2023/10/11 22:24:35 by fneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int size)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	unsigned int	i;
+	size_t	src_len;
+	size_t	i;
 
-	i = 0;
+	src_len = 0;
+	while (src[src_len] != '\0')
+	{
+		src_len++;
+	}
 	if (size == 0)
-		return (ft_strlen(src));
-	while (i < (size - 1))
+	{
+		return (src_len);
+	}
+	i = 0;
+	while (src[i] != '\0' && i < (size - 1))
 	{
 		dest[i] = src[i];
 		i++;
 	}
-	if (i < size)
-	{
-		dest[i] = '\0';
-	}
-	return (ft_strlen(src));
+	dest[i] = '\0';
+	return (src_len);
 }
+/*int main()
+{
+	char src[] = "ciao";
+	char dest[] = "co";
+	printf("%ld", ft_strlcpy(dest, src, 4));
+	return (0);
+}*/
+
+/*La funzione strlcpy copia fino a size - 1 caratteri 
+dalla stringa di origine src 
+alla stringa di destinazione dst, garantendo che la stringa di destinazione 
+sia terminata da un carattere null ('\0'). 
+Se la stringa di origine src è più lunga di size - 1, 
+verranno copiati solo i primi size - 1 caratteri, 
+e la stringa di destinazione sarà comunque terminata da '\0'.*/

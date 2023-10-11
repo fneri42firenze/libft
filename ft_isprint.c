@@ -6,7 +6,7 @@
 /*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 20:35:00 by fneri             #+#    #+#             */
-/*   Updated: 2023/10/09 20:37:15 by fneri            ###   ########.fr       */
+/*   Updated: 2023/10/11 20:23:43 by fneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,3 +19,9 @@ int	ft_isprint(int a)
 	else
 		return (0);
 }
+/*int main()
+{
+	char a = '\n';
+	printf("%d", ft_isprint(a));
+	return (0);
+}*/

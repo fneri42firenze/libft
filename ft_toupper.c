@@ -6,7 +6,7 @@
 /*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 20:35:55 by fneri             #+#    #+#             */
-/*   Updated: 2023/10/09 20:36:04 by fneri            ###   ########.fr       */
+/*   Updated: 2023/10/11 21:22:58 by fneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,3 +19,9 @@ int	ft_toupper(int c)
 	else
 		return (c);
 }
+/*int main()
+{
+	char c = 'a';
+	printf("%c", ft_toupper(c));
+	return (0);
+}*/

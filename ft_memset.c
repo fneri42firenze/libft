@@ -6,7 +6,7 @@
 /*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 20:35:18 by fneri             #+#    #+#             */
-/*   Updated: 2023/10/09 20:37:00 by fneri            ###   ########.fr       */
+/*   Updated: 2023/10/11 20:28:48 by fneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,14 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
-
+/*int main()
+{
+	char str[] = "Hello world";
+	char *p;
+	p = ft_memset(str, 'w', 11);
+	printf("%s", p);
+	return (0);
+}*/
 /*
 Riceve tre argomenti:
 void *s: un puntatore a una zona di memoria da inizializzare.

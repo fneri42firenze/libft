@@ -6,7 +6,7 @@
 /*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 20:35:11 by fneri             #+#    #+#             */
-/*   Updated: 2023/10/10 18:47:27 by fneri            ###   ########.fr       */
+/*   Updated: 2023/10/11 20:27:04 by fneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,14 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
+/*int main()
+{
+	char src[50] = "ciaoooo";
+	char dest[50];
+	ft_memcpy(dest, src, ft_strlen(src) + 1);
+	printf("Copied string : %s\n", dest);
+	return (0);
+}*/
 /*
 All'interno del ciclo, 
 *((char *)dest + i) accede 

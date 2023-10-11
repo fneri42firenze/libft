@@ -6,7 +6,7 @@
 /*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 20:35:15 by fneri             #+#    #+#             */
-/*   Updated: 2023/10/09 20:37:06 by fneri            ###   ########.fr       */
+/*   Updated: 2023/10/11 22:48:23 by fneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,14 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-// #include <stdio.h>
-// int main()
-// {
-//     char src[] = "spiderman";
-//     char dest[] = "boh";
-//     size_t n = 3;
+/*
+int main()
+{
+    char src[] = "spiderman";
+    char dest[] = "boh";
+    size_t n = 3;
 
-//     ft_memmove(dest, src, n);
-//     printf("src is: %s\n" , src);
-//     printf("dest is: %s\n" , dest);
-// }
+    ft_memmove(dest, src, n);
+    printf("src is: %s\n" , src);
+    printf("dest is: %s\n" , dest);
+}*/

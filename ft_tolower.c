@@ -6,7 +6,7 @@
 /*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 20:35:51 by fneri             #+#    #+#             */
-/*   Updated: 2023/10/09 20:37:04 by fneri            ###   ########.fr       */
+/*   Updated: 2023/10/11 21:23:34 by fneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,3 +19,9 @@ int	ft_tolower(int c)
 	else
 		return (c);
 }
+/*int main()
+{
+	char c = 'A';
+	printf("%c", ft_tolower(c));
+	return (0);
+}*/

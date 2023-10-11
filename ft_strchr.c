@@ -6,7 +6,7 @@
 /*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 20:35:22 by fneri             #+#    #+#             */
-/*   Updated: 2023/10/09 20:36:58 by fneri            ###   ########.fr       */
+/*   Updated: 2023/10/11 22:43:33 by fneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,9 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return (str);
 }
+/*int main()
+{
+	char src[] = "ciao";
+	printf("%s", ft_strchr(src, 'z'));
+	return (0);
+}*/

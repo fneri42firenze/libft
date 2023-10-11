@@ -6,7 +6,7 @@
 /*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 20:34:52 by fneri             #+#    #+#             */
-/*   Updated: 2023/10/09 20:37:17 by fneri            ###   ########.fr       */
+/*   Updated: 2023/10/11 20:21:56 by fneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,3 +19,9 @@ int	ft_isascii(int a)
 	else
 		return (0);
 }
+/*int main()
+{
+	char a = '\\';
+	printf("%d", ft_isascii(a));
+	return (0);
+}*/

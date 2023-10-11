@@ -6,7 +6,7 @@
 /*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 20:33:12 by fneri             #+#    #+#             */
-/*   Updated: 2023/10/09 20:37:21 by fneri            ###   ########.fr       */
+/*   Updated: 2023/10/11 20:14:49 by fneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,13 @@ void	*ft_calloc(size_t count, size_t size)
 	ft_bzero(appoggio, size * count);
 	return (appoggio);
 }
-
+/*int main()
+{
+	char *str;
+	str = ft_calloc(10, sizeof(char));
+	printf("%s\n", str);
+	return (0);
+}*/
 /*Viene allocata  una porzione di memoria 
 usando la funzione malloc per (count * size) byte. 
 Il puntatore a questa memoria viene assegnato alla variabile ptr.
