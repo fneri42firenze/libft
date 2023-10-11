@@ -6,7 +6,7 @@
 /*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 20:36:44 by fneri             #+#    #+#             */
-/*   Updated: 2023/10/10 19:27:07 by fneri            ###   ########.fr       */
+/*   Updated: 2023/10/11 11:13:39 by fneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_strlcat(char *a, char *b, unsigned int c);
-int		ft_strlcpy(char *a, char *b, unsigned int c);
+unsigned int    ft_strlcpy(char *a, const char *b, unsigned int c);
 int		ft_strlen(const char *c);
 int		ft_strncmp(char *a, char *b, unsigned int c);
 int		ft_atoi(char *a);

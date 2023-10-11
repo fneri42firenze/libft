@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/09 20:35:32 by fneri             #+#    #+#             */
-/*   Updated: 2023/10/11 11:11:54 by fneri            ###   ########.fr       */
+/*   Created: 2023/10/11 13:33:34 by fneri             #+#    #+#             */
+/*   Updated: 2023/10/11 14:01:44 by fneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int size)
+void ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	unsigned int	i;
+    unsigned int  i;
 
-	i = 0;
-	if (size == 0)
-		return (ft_strlen(src));
-	while (i < (size - 1))
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	if (i < size)
-	{
-		dest[i] = '\0';
-	}
-	return (ft_strlen(src));
+    i = 0;
+    while(s[i])
+    {
+        f(i, s + i);
+        i++;
+    }
 }
+
+/*void my_toupper(unsigned int i, char *c)
+{
+	*c = ft_toupper(*c);
+}
+int main()
+{
+    char s[] = "abcdef";
+    ft_striteri(s, &my_toupper);
+	printf("%s\n", s);
+}*/
