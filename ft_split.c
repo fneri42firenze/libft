@@ -6,16 +6,16 @@
 /*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 18:51:28 by fneri             #+#    #+#             */
-/*   Updated: 2023/10/11 13:31:04 by fneri            ###   ########.fr       */
+/*   Updated: 2023/10/11 17:17:33 by fneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	declare_variables(size_t *i, size_t *len, size_t *start, size_t *word_count, size_t *word_len, char *s)
+void	declare_variables(size_t *i, size_t *start,
+							size_t *word_count, size_t *word_len)
 {
 	*i = 0;
-	*len = ft_strlen(s);
 	*start = 0;
 	*word_count = 0;
 	*word_len = 0;
@@ -24,17 +24,16 @@ void	declare_variables(size_t *i, size_t *len, size_t *start, size_t *word_count
 char	**ft_split(char const *s, char c)
 {
 	size_t	i;
-	size_t	len;
 	size_t	start;
 	size_t	word_count;
 	size_t	word_len;
 	char	**result;
 
-	declare_variables(&i, &len, &start, &word_count, &word_len, (char *)s);
-	result = (char **)malloc(sizeof(char *) * (len + 1));
+	declare_variables(&i, &start, &word_count, &word_len);
+	result = (char **)malloc(sizeof(char *) * (ft_strlen(s) + 1));
 	if (!result)
 		return (NULL);
-	while (i++ <= len)
+	while (i++ <= ft_strlen(s))
 	{
 		if (s[i] == c || s[i] == '\0')
 		{
@@ -47,10 +46,11 @@ char	**ft_split(char const *s, char c)
 			word_count++;
 		}
 	}
+	result(word_count) = NULL;
 	return (result);
 }
-/*
-int main()
+
+/*int main()
 {
 	char s[] = "hello,world,ciao";
 	char c = ',';
@@ -69,5 +69,4 @@ int main()
 	}
 
 	return 0;
-}
-*/
+}*/

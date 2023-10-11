@@ -1,44 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 14:13:29 by fneri             #+#    #+#             */
-/*   Updated: 2023/10/10 14:19:09 by fneri            ###   ########.fr       */
+/*   Created: 2023/10/11 14:06:33 by fneri             #+#    #+#             */
+/*   Updated: 2023/10/11 16:35:26 by fneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_itoa(int n)
 {
-	size_t	i;
-	size_t	j;
 	char	*str;
 
-	i = 0;
-	j = 0;
+	str = (char *)malloc(sizeof(char) * 2);
 	if (!str)
 		return (NULL);
-	str = (char*)malloc(sizeof(*s) * (len + 1));
-	while (s[i])
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
+	if (n < 0)
 	{
-		if (i >= start && j < len)
-		{
-			str[j] = s[i];
-			j++;
-		}
-		i++;
+		str[0] = '-';
+		str[1] = '\0';
+		str = ft_strjoin(str, ft_itoa(-n));
 	}
-	str[j] = '\0';
+	else if (n >= 10)
+		str = ft_strjoin(ft_itoa(n / 10), ft_itoa(n % 10));
+	else if (n < 10 && n >= 0)
+	{
+		str[0] = n + '0';
+		str[1] = '\0';
+	}
 	return (str);
 }
-
-/*#include <stdio.h>
-int  main()
+/*
+int main()
 {
-    char    s[] = "abcdef";
-    printf("%s\n", ft_substr(s, 3, 2));
-}*/
+    int n = -2147483648;
+    printf("%s\n", ft_itoa(n));
+}
+*/

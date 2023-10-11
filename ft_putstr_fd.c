@@ -6,13 +6,13 @@
 /*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 19:19:43 by fneri             #+#    #+#             */
-/*   Updated: 2023/10/10 19:27:23 by fneri            ###   ########.fr       */
+/*   Updated: 2023/10/11 17:28:45 by fneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char const *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
 	int		i;
 
