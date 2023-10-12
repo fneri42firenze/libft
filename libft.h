@@ -6,7 +6,7 @@
 /*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 20:36:44 by fneri             #+#    #+#             */
-/*   Updated: 2023/10/11 22:32:09 by fneri            ###   ########.fr       */
+/*   Updated: 2023/10/12 17:28:24 by fneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 size_t	ft_strlcat(char *a, const char *b, size_t c);
 size_t	ft_strlcpy(char *a, const char *b, size_t c);
-int		ft_strlen(const char *c);
+size_t	ft_strlen(const char *c);
 int		ft_strncmp(char *a, const char *b, size_t c);
 int		ft_atoi(char *a);
 char	*ft_strdup(char *a);

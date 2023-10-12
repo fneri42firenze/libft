@@ -6,7 +6,7 @@
 /*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 18:51:28 by fneri             #+#    #+#             */
-/*   Updated: 2023/10/11 17:17:33 by fneri            ###   ########.fr       */
+/*   Updated: 2023/10/12 17:29:11 by fneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ char	**ft_split(char const *s, char c)
 			word_count++;
 		}
 	}
-	result(word_count) = NULL;
+	result[word_count] = NULL;
 	return (result);
 }
 

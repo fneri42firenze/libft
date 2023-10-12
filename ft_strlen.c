@@ -6,13 +6,13 @@
 /*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 20:35:36 by fneri             #+#    #+#             */
-/*   Updated: 2023/10/11 22:03:07 by fneri            ###   ########.fr       */
+/*   Updated: 2023/10/12 17:28:04 by fneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
 	int	conta;
 

@@ -6,7 +6,7 @@
 /*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 14:13:29 by fneri             #+#    #+#             */
-/*   Updated: 2023/10/11 22:50:32 by fneri            ###   ########.fr       */
+/*   Updated: 2023/10/12 17:25:44 by fneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	i = 0;
 	j = 0;
+	str = (char *)malloc(sizeof(*s) * (len + 1));
 	if (!str)
 		return (NULL);
-	str = (char *)malloc(sizeof(*s) * (len + 1));
 	while (s[i])
 	{
 		if (i >= start && j < len)

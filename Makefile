@@ -11,15 +11,15 @@ OBJS := $(SRCS:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-$(AR) $(ARFLAGS) $(NAME) $(OBJS)
-$(CC) $(CFLAGS) -c $(SRCS)
+	$(AR) $(ARFLAGS) $(NAME) $(OBJS)
+	$(CC) $(CFLAGS) -o $@ $(SRCS)
 
 clean:
-$(RM) $(OBJS)
+	$(RM) $(OBJS)
 
 fclean: clean
-$(RM) $(NAME)
+	$(RM) $(NAME)
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: clean fclean re all
