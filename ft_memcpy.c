@@ -6,7 +6,7 @@
 /*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 20:35:11 by fneri             #+#    #+#             */
-/*   Updated: 2023/10/11 20:27:04 by fneri            ###   ########.fr       */
+/*   Updated: 2023/10/16 17:47:42 by fneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,15 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	size_t	i;
 
 	i = 0;
-	while (i < n)
+	if (dest == NULL && src == NULL)
+		return (NULL);
+	else
 	{
-		*((char *)dest + i) = *((char *)src + i);
-		i++;
+		while (i < n)
+		{
+			*((char *)dest + i) = *((char *)src + i);
+			i++;
+		}
 	}
 	return (dest);
 }

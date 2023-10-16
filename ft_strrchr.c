@@ -6,7 +6,7 @@
 /*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 20:35:47 by fneri             #+#    #+#             */
-/*   Updated: 2023/10/09 20:37:02 by fneri            ###   ########.fr       */
+/*   Updated: 2023/10/16 14:39:57 by fneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strrchr(const char *s, int c)
 {
 	size_t	i;
 
-	i = ft_strlen(s);
+	i = ft_strlen(s) + 1;
 	while (i--)
 		if (*(s + i) == (char ) c)
 			return ((char *) s + i);

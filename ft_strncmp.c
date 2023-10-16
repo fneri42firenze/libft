@@ -6,7 +6,7 @@
 /*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 20:35:39 by fneri             #+#    #+#             */
-/*   Updated: 2023/10/11 22:03:04 by fneri            ###   ########.fr       */
+/*   Updated: 2023/10/16 14:55:06 by fneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_strncmp(char *s1, const char *s2, size_t n)
 	while (i < n && s1[i] && s2[i] && s1[i] == s2[i])
 		i++;
 	if (i < n)
-		return (s1[i] - s2[i]);
+		return ((unsigned char) s1[i] - (unsigned char) s2[i]);
 	else
 		return (0);
 }

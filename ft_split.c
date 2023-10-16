@@ -6,48 +6,72 @@
 /*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 18:51:28 by fneri             #+#    #+#             */
-/*   Updated: 2023/10/12 17:29:11 by fneri            ###   ########.fr       */
+/*   Updated: 2023/10/16 17:39:03 by fneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	declare_variables(size_t *i, size_t *start,
-							size_t *word_count, size_t *word_len)
+static int	count_words(const char *str, char c)
 {
-	*i = 0;
-	*start = 0;
-	*word_count = 0;
-	*word_len = 0;
+	int	i;
+	int	trigger;
+
+	i = 0;
+	trigger = 0;
+	while (*str)
+	{
+		if (*str != c && trigger == 0)
+		{
+			trigger = 1;
+			i++;
+		}
+		else if (*str == c)
+			trigger = 0;
+		str++;
+	}
+	return (i);
+}
+
+static char	*word_dup(const char *str, int start, int finish)
+{
+	char	*word;
+	int		i;
+
+	i = 0;
+	word = malloc((finish - start + 1) * sizeof(char));
+	while (start < finish)
+		word[i++] = str[start++];
+	word[i] = '\0';
+	return (word);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	size_t	i;
-	size_t	start;
-	size_t	word_count;
-	size_t	word_len;
-	char	**result;
+	size_t	j;
+	int		index;
+	char	**split;
 
-	declare_variables(&i, &start, &word_count, &word_len);
-	result = (char **)malloc(sizeof(char *) * (ft_strlen(s) + 1));
-	if (!result)
-		return (NULL);
-	while (i++ <= ft_strlen(s))
+	split = malloc((count_words(s, c) + 1) * sizeof(char *));
+	if (!s || !split)
+		return (0);
+	i = 0;
+	j = 0;
+	index = -1;
+	while (i <= ft_strlen(s))
 	{
-		if (s[i] == c || s[i] == '\0')
+		if (s[i] != c && index < 0)
+			index = i;
+		else if ((s[i] == c || i == ft_strlen(s)) && index >= 0)
 		{
-			word_len = i - start;
-			result[word_count] = (char *)malloc(sizeof(char) * (word_len + 1));
-			if (!result[word_count])
-				return (NULL);
-			ft_strlcpy(result[word_count], &s[start], word_len + 1);
-			start = i + 1;
-			word_count++;
+			split[j++] = word_dup(s, index, i);
+			index = -1;
 		}
+		i++;
 	}
-	result[word_count] = NULL;
-	return (result);
+	split[j] = 0;
+	return (split);
 }
 
 /*int main()
